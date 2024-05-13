@@ -90,6 +90,15 @@ console.log(matrix);
 // find the html table element with the id 'table'
 const grid = document.getElementById('wordl_grid');
 let currentRow = 0;
+const hintButton = document.getElementById('hintButton');
+hintButton.addEventListener('click', () => {
+    if (sidenote.style.display === 'none') {
+        sidenote.style.display = 'flex';
+    }
+    else {
+        sidenote.style.display = 'none';
+    }
+});
 //create a function that takes in a matrix and creates a table with that matrix, create a new table inside the table div element
 function createTable(matrix) {
     const table = document.createElement('table');

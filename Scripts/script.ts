@@ -11,10 +11,13 @@ let wordsCSV:string[][] =  [["","",""]];
 
 const filePath:string = '../HTML/words.csv';
 
+
+
+
 async function loadCSV(_path: string): Promise<string[][]> {
     const response = await fetch(_path);
     const csvData:string = await response.text();
-    
+   
     return new Promise<string[][]>((resolve, reject) => {
         Papa.parse(csvData, {
             header: false,
@@ -103,6 +106,16 @@ const grid =document.getElementById('wordl_grid');
 
 let currentRow:number = 0;
 
+const hintButton = document.getElementById('hintButton');
+
+
+hintButton.addEventListener('click', () => {
+    if (sidenote.style.display === 'none') {
+        sidenote.style.display = 'flex';
+    } else {
+        sidenote.style.display = 'none';
+    }
+});
 
 //create a function that takes in a matrix and creates a table with that matrix, create a new table inside the table div element
 function createTable(matrix: Letter[][]): HTMLTableElement {
