@@ -1,0 +1,30 @@
+{
+    "name": "simpleWordl",
+    "engines": {
+        "node": ">=20.6.0"
+    },
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "dev": "node --env-file=.env --watch -r ts-node/register src/index.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.11.19",
+        "@typescript-eslint/eslint-plugin": "^7.0.2",
+        "@typescript-eslint/parser": "^7.0.2",
+        "eslint": "^8.56.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "@types/papaparse": "^5.3.14",
+        "@types/toastr": "^2.1.43",
+        "toastr": "^2.1.4"
+    }
+}
